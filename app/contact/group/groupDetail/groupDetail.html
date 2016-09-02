@@ -1,0 +1,50 @@
+<ons-page ng-controller="groupDetailCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center" style="font-weight: 100">{{group.groupName}}</div>
+        <div class="right">
+            <span class="ion-plus" ng-click="goToMembers()"></span>
+        </div>
+
+    </ons-toolbar>
+
+    <div style="height: 29%;background-color:rgba(204, 255, 255,.5);padding-top: 30px">
+        <div style="margin: 0 auto 0 auto ;width: 80px;height: 80px">
+            <img width="80px" height="80px" style=""  src="img/manhead.jpg">
+        </div>
+        <div style="border-bottom: 1px solid black;margin-top: 12px;" >
+            <div style="color: black;margin-left: 20px">
+                <p style="font-size: 14px;line-height: 14px;display: inline">{{group.groupNumber}}</p>
+                <span ng-click="editGroupNum()" style="color: firebrick" class="ion-edit"></span>
+            </div>
+        </div>
+        <div style="height: 32px;" >
+            <ons-row>
+                <ons-col>
+                    <div style="margin-top:7px;margin-left: 20px;text-align:center;width: 95px;font-size: 12px;background-color: green;color: white;border-radius: 20%">
+                        兴趣爱好-运动
+                    </div>
+                </ons-col>
+                <ons-col width="30px">
+                    <span style="font-size: 25px" class="ion-ios-arrow-forward"></span>
+                </ons-col>
+            </ons-row>
+        </div>
+
+
+
+    </div>
+    <div >
+        <ons-list>
+            <ons-list-item  modifier="chevron">
+                <ons-row>
+                    <ons-col>群成员</ons-col>
+                    <ons-col width="40px" style="font-size: 16px">3人</ons-col>
+                </ons-row>
+            </ons-list-item>
+        </ons-list>
+
+    </div>
+</ons-page>

@@ -1,0 +1,15 @@
+<ons-dialog var="dialog" ng-controller="editSexCtrl">
+
+    <ons-list>
+
+        <!--为什么ng-bind在一开始的时候不显示？-->
+        <ons-list-item modifier="tappable" ng-click="chooseMan()" ng-bind="man">
+            男
+        </ons-list-item>
+        <ons-list-item modifier="tappable" ng-click="chooseWoman()" ng-bind="woman">
+            女
+        </ons-list-item>
+
+    </ons-list>
+
+</ons-dialog>

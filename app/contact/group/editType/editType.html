@@ -1,0 +1,209 @@
+<ons-page class="edit-type-page " ng-controller="editTypeCtrl">
+    <ons-toolbar class="my-toolbar">
+         <div class="left">
+             <ons-back-button></ons-back-button>
+         </div>
+        <div class="center">选择群分类</div>
+    </ons-toolbar>
+    <ons-row class="edit-type-row">
+        <ons-col class="left">
+            <div ng-click="selectType(types.classmate)"  >
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: whitesmoke;">
+                            <span style="color: deepskyblue" class="ion-android-contact"></span>
+                        </div>
+                           </ons-col>
+                        <ons-col>
+                            <label>{{types["classmate"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div >
+        </ons-col>
+        <ons-col class="right">
+            <div ng-click="selectType(types.colleague)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: whitesmoke;">
+                            <span style="color: springgreen" class="ion-android-person"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label >{{types["colleague"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+    </ons-row>
+    <ons-row class="edit-type-row">
+        <ons-col class="left">
+            <div ng-click="selectType(types.friend)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: whitesmoke;">
+                            <span style="color: orange" class="ion-android-people"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label >{{types["friend"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+        <ons-col class="right">
+            <div ng-click="selectType(types.family)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: whitesmoke;">
+                            <span style="color: deeppink" class="ion-android-contacts"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label>{{types["family"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+
+    </ons-row>
+
+    <ons-row class="edit-type-row" style="margin-top: 10px">
+        <ons-col class="left">
+            <div ng-click="selectType(types.hobby)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: darkorange;">
+                            <span style="color: white" class="ion-ios-musical-notes"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label >{{types["hobby"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+        <ons-col class="right">
+            <div ng-click="selectType(types.fans)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: orchid;">
+                            <span style="color: white" class="ion-android-star"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label>{{types["fans"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+
+    </ons-row>
+    <ons-row class="edit-type-row">
+        <ons-col class="left">
+            <div ng-click="selectType(types.life)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: forestgreen;">
+                            <span style="color: white" class=" ion-tshirt"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label >{{types["life"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+        <ons-col class="right">
+            <div ng-click="selectType(types.game)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: lightsalmon;">
+                            <span style="color: white" class="ion-ios-game-controller-b-outline"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label>{{types["game"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+
+    </ons-row>
+    <ons-row class="edit-type-row">
+        <ons-col class="left">
+            <div ng-click="selectType(types.study)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: lightsalmon;">
+                            <span style="color: white" class="ion-ios-paper"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label >{{types["study"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+        <ons-col class="right">
+            <div ng-click="selectType(types.traffic)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: forestgreen;">
+                            <span style="color: white" class="ion-android-plane"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label>{{types["traffic"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+
+    </ons-row>
+
+    </ons-row>
+    <ons-row class="edit-type-row">
+        <ons-col class="left">
+            <div ng-click="selectType(types.techlonogy)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: orchid;">
+                            <span style="color: white" class="ion-android-laptop"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label >{{types["techlonogy"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+        <ons-col class="right">
+            <div ng-click="selectType(types.brand)">
+                <div >
+                    <ons-row>
+                        <ons-col><div style="background-color: darkorange;">
+                            <span style="color: white" class="ion-ios-pricetags"></span>
+                        </div>
+                        </ons-col>
+                        <ons-col>
+                            <label>{{types["brand"]}}</label>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </ons-col>
+
+    </ons-row>
+
+</ons-page>

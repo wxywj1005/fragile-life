@@ -1,0 +1,9 @@
+<ons-dialog var="timePickerDlg" ng-controller="MyCtrl"  class="my-tpick-dlg">
+        <div  >
+
+            <ng-time-selector hours="newPlan.planTime.hour" minutes="newPlan.planTime.minute"></ng-time-selector>
+        </div>
+    <div >
+        <button class="btn btn-primary" ng-click="ok()">确定</button>
+    </div>
+</ons-dialog>

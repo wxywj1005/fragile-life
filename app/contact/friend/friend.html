@@ -1,0 +1,22 @@
+    <ons-page ng-controller="friendCtrl">
+        <ons-toolbar class="my-toolbar">
+            <div class="center">我的好友</div>
+            <div class="right" >
+                <label style="margin-right: 10px" ng-click="add()">添加</label>
+            </div>
+        </ons-toolbar>
+
+
+        <ons-tabbar  position="top" class="my-tab-bar friend-tab-bar">
+            <ons-tab class="my-toolbar friend-tab"  page="app/contact/friend/friendList/friendList.html" label="好友" icon="ion-person"
+                     active="true"></ons-tab>
+            <ons-tab class="my-toolbar new-friend-tab" page="app/contact/friend/newFriendList/newFriendList.html">
+                <button class="tab-bar__button tab-bar-inner tab-bar--top__button"><div class="tab-bar__icon">
+                    <ons-icon badge="newFriendNum" icon="ion-person-add" class="ons-icon ion-person-add ons-icon--ion" _compiled=""></ons-icon>
+                </div><div class="tab-bar__label">新好友</div></button>
+            </ons-tab>
+            <ons-tab class="my-toolbar group-tab" page="app/contact/group/groupList/groupList.html"   label="群" icon="ion-person-stalker"></ons-tab>
+        </ons-tabbar>
+
+
+    </ons-page>

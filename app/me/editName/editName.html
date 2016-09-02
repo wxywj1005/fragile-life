@@ -1,0 +1,18 @@
+<ons-page ng-controller="eitNameCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left " >
+        </div>
+        <div class="center" ><label>修改姓名</label></div>
+        <div class="right " >
+            <label ng-click="finish()" style="margin-right: 10px">完成</label>
+        </div>
+
+
+    </ons-toolbar>
+    <div class="input-group" style="margin: 2px;margin-top: 12px">
+               <span class="input-group-addon">
+                    <span style="font-size: 18px" class="ion-heart"></span>
+               </span>
+        <input type="text" class="form-control" ng-model="me.name">
+    </div><!-- /input-group -->
+</ons-page>

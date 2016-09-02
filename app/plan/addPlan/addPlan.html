@@ -1,0 +1,40 @@
+<ons-page ng-controller="addPlanCtrl" class="add-plan-page">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button style="color: white"></ons-back-button>
+        </div>
+        <div class="center">
+            新增安排
+        </div>
+    </ons-toolbar>
+    <form>
+        <input type="text" ng-model="newPlan.text"
+               style="border-radius: 0;margin-top: 6px" class="form-control" placeholder="输入安排名称 ">
+        <ons-list class="my-list" style="margin-top: 10px">
+            <my-list-item ng-click="editTime('app/plan/dialog/timePickerDlg/timePickerDlg.html')"
+                          item-name="'时间'" item-desc="time|date :'HH:mm'" icon="'ion-ios-alarm-outline'"
+                          icon-color="'orange'">
+            </my-list-item>
+            <my-list-item ng-click="editRank()" icon="'ion-ios-alarm-outline'" icon-color="'green'"
+                          item-name="'重要性'" item-desc="newPlan.rank|rankFilter"></my-list-item>
+
+
+
+        </ons-list>
+
+        <ons-list class="my-list" style="margin-top: 20px">
+            <my-list-item ng-click="editDetail()" icon="'ion-ios-star-outline'" icon-color="'deepskyblue'"
+                          desc-font-size="'13px'"  item-name="'细节'" item-desc="newPlan.detail"></my-list-item>
+            <my-list-item ng-click="editAddition()" item-name="'注意事项'" item-desc="newPlan.addition" desc-font-color="'gary'"
+                          desc-font-size="'13px'" icon="'ion-ios-information-outline'" icon-color="'orangered'"
+                        ></my-list-item>
+
+        </ons-list>
+
+
+        <button class="btn btn-primary " ng-click="addPlan()"
+                style="background-color: rgb(0, 153, 255);height: 36px;width: 100%;position: absolute;bottom: 20px">确定
+        </button>
+
+    </form>
+</ons-page>

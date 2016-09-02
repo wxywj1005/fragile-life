@@ -1,0 +1,102 @@
+<ons-page ng-controller="planDetailCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left" >
+            <ons-back-button>返回</ons-back-button>
+        </div>
+        <div class="center">
+            {{plan.text}}
+        </div>
+        <div class="right right-icon">
+            <span class="ion-ios-trash"
+                  ng-click="deletePlan('app/plan/dialog/deletePlanDlg/deletePlanDlg.html')"></span>
+        </div>
+    </ons-toolbar>
+
+    <ons-list modifier="chevron" class="tr-box">
+        <ons-list-item style="">
+            <ons-row >
+                <ons-col>
+                    时间：
+
+                    <span>{{plan.planTime|date:"yyyy-MM-dd HH:mm"}}</span>
+                </ons-col>
+                <ons-col width="40px">
+                    <span class="ion-edit"></span>
+                </ons-col>
+            </ons-row>
+
+        </ons-list-item>
+        <ons-list-item>
+            重要性:
+            <span>{{plan.rank|rankFilter}}</span>
+        </ons-list-item>
+
+    </ons-list>
+
+
+    <div class="panel panel-default tr-box" ng-hide="editting">
+        <div class="panel-heading">
+
+            <ons-row>
+                <ons-col>
+                    <label>详情</label>
+                </ons-col>
+                <ons-col width="40px">
+                    <span class="ion-edit"  ng-click="edit()"></span>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div class="panel-body">
+            {{plan.detail}}
+        </div>
+    </div>
+    <div class="panel panel-default tr-box" ng-show="editting">
+        <div class="panel-heading">
+
+            <ons-row>
+                <ons-col>
+                    <label>详情</label>
+                </ons-col>
+                <ons-col width="40px">
+                    <button class="btn btn-primary btn-small" ng-click="edited()">确认</button>
+                </ons-col>
+            </ons-row>
+        </div>
+        <div class="panel-body" style="padding: 0">
+            <textarea class="form-control" ng-model="plan.detail"></textarea>
+
+        </div>
+    </div>
+
+
+
+    <div class="panel panel-default tr-box" >
+        <div class="panel-heading" >
+
+
+
+    <ons-row>
+        <ons-col>
+            <label>注意</label>
+
+
+        </ons-col>
+        <ons-col width="40px">
+            <span class="ion-edit" ></span>
+        </ons-col>
+    </ons-row>
+
+        </div>
+        <div class="panel-body" style="padding: 0">
+            <textarea rows="4" class="form-control" ng-model="plan.addition"></textarea>
+
+        </div>
+    </div>
+    <ons-row>
+        <ons-col></ons-col>
+        <ons-col width="40px">
+            <span ng-click="shareToFriend()" class="ion-share" style="font-size:30px;color: lightskyblue"></span>
+        </ons-col>
+    </ons-row>
+
+</ons-page>

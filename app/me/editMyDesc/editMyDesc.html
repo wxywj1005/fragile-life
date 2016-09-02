@@ -1,0 +1,17 @@
+<ons-page ng-controller="editMyDescCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left " >
+        </div>
+        <div class="center" ><label>编辑注意事项</label></div>
+        <div class="right " >
+            <label ng-click="finish()" style="margin-right: 10px">完成</label>
+        </div>
+
+
+    </ons-toolbar>
+
+    <textarea class="form-control" rows="5" style="margin-top: 7px; border-radius: 0"
+              ng-model="me.myDescribtion" placeholder="在这里输入个性"></textarea>
+
+
+</ons-page>

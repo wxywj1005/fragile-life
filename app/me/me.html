@@ -1,0 +1,91 @@
+<ons-page ng-controller="MeCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="center">我</div>
+    </ons-toolbar>
+
+    <div class="me-panel ">
+
+        <div style="border-radius: 50%;overflow: hidden;width: 80px;height: 80px;
+            position: absolute;left: 50%;margin-left: -40px;top: 5%">
+            <img src="img/manhead.jpg" class="me-photo" ng-if="me.sex=='男'">
+            <img src="img/woman.jpg" class="me-photo" ng-if="me.sex=='女'">
+            <img src="img/noSex.jpg" class="me-photo" ng-if="me.sex==''"></div>
+
+
+        <div class="me-name" style="color: black;margin-top: 24%">
+            <span class="ion-edit" ng-click="editSex('app/me/dialog/editsex.html')"></span>
+            <label>性别：</label>
+            <lable>{{me.sex}}</lable>
+
+        </div>
+
+    </div>
+    <ons-list class="my-list" style="margin-top: 10px">
+        <my-list-item ng-click="editName()" item-name="'姓名'" item-desc="me.name" ></my-list-item>
+        <my-list-item ng-click="editUserNumber()" item-name="'hx'" item-desc="me.userNumber"></my-list-item>
+
+
+        <!--<ons-list-item ng-click="editUserNumber()" class="my-list-item">
+            <ons-row>
+
+                <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100"></label></ons-col>
+                <ons-col width="64%" style="padding-right: 4px"><p
+                        style="float: right;font-size:14px;line-height: inherit">{{me.userNumber}}</p></ons-col>
+                <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+            </ons-row>
+        </ons-list-item>
+
+        <ons-list-item class="my-list-item"
+                       ng-click="editName()">
+            <ons-row>
+                <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">姓名</label></ons-col>
+                <ons-col width="64%" style="padding-right: 4px">
+                    <label style="float: right;line-height: inherit;font-size: 16px;font-weight: 100">{{me.name}}</label>
+
+                </ons-col>
+                <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+            </ons-row>
+        </ons-list-item>-->
+        </ons-list>
+
+    <ons-list class="my-list" style="margin-top: 20px">
+        <my-list-item desc-font-size="'13px'" ng-click="editHobby()" item-name="'兴趣爱好'" item-desc="me.hobby"></my-list-item>
+        <my-list-item desc-font-size="'13px'" ng-click="editDesc()" item-name="'个性签名'" item-desc="me.myDescribtion"></my-list-item>
+<!--        <ons-list-item class="my-list-item"
+                       ng-click="editHobby()">
+            <ons-row>
+
+                <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">兴趣好爱</label></ons-col>
+                <ons-col width="64%" style="padding-right: 4px">
+                    <label style="float: right;line-height: inherit;font-size: 13px;font-weight: 100">{{me.hobby}}</label>
+                </ons-col>
+                <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+            </ons-row>
+        </ons-list-item>-->
+
+
+
+
+<!--        <ons-list-item ng-click="editDesc()" class="my-list-item">
+            <ons-row>
+
+                <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">个性签名</label></ons-col>
+                <ons-col width="64%" style="padding-right: 4px "><p
+                        style="float: right;font-size:13px;line-height: inherit">{{me.myDescribtion}}</p></ons-col>
+                <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+            </ons-row>
+
+        </ons-list-item>-->
+
+
+    </ons-list>
+
+
+
+
+    <div>
+        <button class="btn btn-primary " ng-click="exit()"
+                style="height: 36px;width: 100%;position: absolute;bottom: 20px">退出
+        </button>
+    </div>
+</ons-page>

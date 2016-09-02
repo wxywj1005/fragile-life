@@ -1,0 +1,28 @@
+<ons-page ng-controller="createGroupCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">创建群</div>
+    </ons-toolbar>
+    <form ng-submit="showFriendList()">
+        <div class="head-photo"  style="width: 90px;height: 90px;margin: 70px auto 0 auto;">
+            <img src="img/manhead.jpg" width="90px" height="90px">
+        </div>
+        <div class="content-center" style="margin-top: 50px">
+            <input ng-model="group.groupName"
+                   type="text" class="content-center" placeholder="群名称"  style="font-size: 18px;border: none;border-bottom: 1px solid deepskyblue">
+        </div>
+        <div style="margin-top: 260px" class="content-center">
+            <button type="submit"
+                    style="border-radius:5px;width: 270px;height:41px;font-size: 18px;color: white;background-color:rgb(0, 153, 255) ">提交</button>
+        </div>
+        <div style="margin-top: 30px" class="content-center">
+            <p style="font-size: 14px">
+
+                我已阅读同意
+                <span style="color: deepskyblue;font-size: 13px"> hx声明服务</span>
+            </p>
+        </div>
+    </form>
+</ons-page>

@@ -1,0 +1,88 @@
+<ons-page ng-controller="planListCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left left-icon" >
+            <span style="position: relative" class="ion-chatbox-working" badge="quasiPlanNum" ng-click="passPlan()">
+
+            </span>
+        </div>
+        <div class="center">今日日程</div>
+        <div class="right right-icon">
+            <span class="ion-ios-plus-empty" ng-click="goToAddPlan()"></span>
+        </div>
+    </ons-toolbar>
+
+    <ons-row class="radio-row">
+        <ons-col>
+            <!--                <div class="radio" ng-click="timeClick()">
+                                <label>
+                                    <input type="radio" name="order" class="my-radio" ng-model="timeRadio"
+                                           value="true" ng-checked="isTime">
+                                </label>
+                                时间
+                            </div>-->
+            <div style="margin-top: 6px">
+                <li class="dropdown" style="width: 100%;list-style: none">
+                    <a  class="dropdown-toggle" style="font-size: 16px"  data-toggle="dropdown">
+                        排序
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu my-dropdown-menu" style="width: 54.63px">
+                        <li ng-click="orderByPlanTime()"><a href="#" style="font-size: 16px">时间</a></li>
+                        <li ng-click="orderByRank()"><a href="#"  style="font-size: 16px">重要性</a></li>
+
+
+                    </ul>
+                </li>
+            </div>
+        </ons-col>
+
+
+        <ons-col>
+            <div style="margin-top: 6px">
+                <li class="dropdown" style="width: 100%;list-style: none">
+                    <a  class="dropdown-toggle" style="font-size: 16px"  data-toggle="dropdown">
+                        筛选
+                        <b class="ion-funnel"></b>
+                    </a>
+                    <ul class="dropdown-menu my-dropdown-menu" style="width: 54.63px;margin-top: 5px"
+                    >
+                        <li ><a href="#" style="font-size: 16px" ng-repeat="rank in ranks" ng-bind="rank | rankFilter" ng-click="filterRank(rank)"></a></li>
+                    </ul>
+                </li>
+            </div>
+            <!--                <div class="radio" ng-click="rankClick()">
+                                <label>
+                                    <input type="radio" name="order" class="my-radio" ng-model="rankRadio" value="false"
+                                           ng-change="test1()">
+                                </label>
+                                重要性
+                            </div>-->
+        </ons-col>
+        <ons-col style="margin-right: 5px">
+            <div class="input-group my-search-input">
+
+                <input ng-change="searchPlan()" ng-blur="exitSearch()" ng-model="searchPlanText"
+                       type="text" class="form-control"
+                       style="height: 30px;width: 160px;border-bottom-left-radius: 12px;
+                           border-top-left-radius: 12px">
+                <span style="border-bottom-right-radius: 12px;border-top-right-radius: 12px;font-size: 16px;height: 16px"
+                      class="input-group-addon">
+                        <span class="ion-ios-search-strong"></span>
+                    </span>
+            </div>
+        </ons-col>
+    </ons-row>
+
+
+
+    <ons-list push-refresh  class="tr-box">
+        <my-list-item ng-repeat="plan in planList" ng-click="goToDetail(plan.planId)"
+                      ng-style="{'background' : plan.color}" item-name="plan.text"
+                      item-desc="plan.planTime | date:'HH:mm'" style="z-index: 99999999"></my-list-item>
+
+    </ons-list>
+
+
+
+
+</ons-page>

@@ -1,0 +1,65 @@
+<ons-page ng-controller="canvasCtrl">
+    <ons-toolbar>
+        <div class="center">
+            画板
+        </div>
+    </ons-toolbar>
+    <div class="screen row">
+        <div class="left_bar">
+            <div class="icon">
+                <a onclick="penClick();" id="pen">
+                    <img src="img/canvas/pen.png" alt="图片加载失败" class="icon_img"></a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="icon">
+                <a onclick="eraserClick();" id="eraser">
+                    <img src="img/canvas/eraser.png" alt="图片加载失败" class="icon_img"></a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="icon icon_attr">
+                <a>
+                    <span class="icon_color"></span>
+                </a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="icon icon_attr">
+                <a id="sm" onclick="sizeToggle(this);">
+                    <span class="icon_size icon_size_sm"></span>
+                </a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="icon icon_attr">
+                <a id="md" onclick="sizeToggle(this);">
+                    <span class="icon_size icon_size_md"></span>
+                </a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="icon icon_attr">
+                <a id="lg" onclick="sizeToggle(this);">
+                    <span class="icon_size icon_size_lg"></span>
+                </a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="icon icon_attr">
+                <a id="xl" onclick="sizeToggle(this);">
+                    <span class="icon_size icon_size_xl"></span>
+                </a>
+            </div>
+            &#x9;&#x9;&#x9;
+            <div class="hide_icon">
+                <a onclick="toggleLeftBar();" cancelable="false">
+                    <img src="img/canvas/u=4025974035,3044441004&amp;fm=21&amp;gp=0.jpg" alt="图片加载失败" class="icon_img"></a>
+            </div>
+        </div>
+        &#x9;&#x9;
+        <div class="show_icon">
+            <a onclick="toggleLeftBar();" cancelable="false">
+                <img src="img/canvas/1.jpg" alt="图片加载失败" class="icon_img"></a>
+        </div>
+        &#x9;&#x9;
+        <div class="canvas_containter col-sm-12">
+            <canvas id="myCanvas"></canvas>
+            <!-- 整个画布-->
+        </div>
+    </div>
+</ons-page>

@@ -1,0 +1,19 @@
+<ons-page ng-controller="passPlanCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button >返回</ons-back-button>
+        </div>
+        <div class="center">好友分享</div>
+    </ons-toolbar>
+    <ons-list class="tr-box">
+        <ons-list-item modifier="chevron"
+                       ng-repeat="quasiPlan in quasiPlanList "
+                       ng-click="passPlan('app/plan/passPlan/passPlanDlg/passPlanDlg.html',quasiPlan)"
+                       ng-style="{background : quasiPlan.color}">
+            <ons-row>
+                <ons-col>{{quasiPlan.text}}</ons-col>
+                <ons-col>{{quasiPlan.planTime | date:"HH:mm"}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

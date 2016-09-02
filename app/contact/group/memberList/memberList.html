@@ -1,0 +1,50 @@
+<ons-page ng-controller="memberListCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button>返回</ons-back-button>
+        </div>
+        <div class="center">群成员</div>
+        <div class="right" ng-click="goToGroupPlan()">
+            <label>编辑安排</label>
+        </div>
+    </ons-toolbar>
+    <div class="input-group my-search-input" style="width: 90%;margin-left: 18px;
+">
+
+
+        <input
+                type="text" class="form-control"
+                style="height: 25px;width: 100%;border-bottom-left-radius: 12px;
+                           border-top-left-radius: 12px " placeholder="好友昵称/hx号">
+        <span style="border-bottom-right-radius: 10px;border-top-right-radius: 10px;font-size: 12px;height: 12px"
+              class="input-group-addon">
+                        <span class="ion-ios-search-strong"></span>
+                    </span>
+
+    </div>
+    <ons-list style="border: none;margin-top: 4px;" >
+        <ons-list-item ng-repeat="member in memberList"
+                       ng-click="selectMember(member)">
+            <ons-row class="my-friend-list-item">
+                <ons-col sty>
+                    <div style="width: 50px;height: 50px;border-radius: 50%;overflow: hidden;margin-bottom: 10px">
+
+                        <img src="img/manhead.jpg" style="width:60px;height: 60px">
+                    </div>
+                </ons-col>
+                <ons-col width="72%">
+                    <div >
+                        <label>{{member.name}}</label>
+                        <p>{{member.myDescribtion}}</p>
+                    </div>
+                </ons-col>
+                <ons-col width="40px" style="margin-top: 10px;">
+                    <span ng-show="member.isSelected" style="color: rosybrown;font-size: 28px" class="ion-android-done"></span>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+
+
+</ons-page>

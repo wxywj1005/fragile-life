@@ -1,0 +1,84 @@
+<ons-page ng-controller="groupAddPlanCtrl" class="add-plan-page">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button style="color: white"></ons-back-button>
+        </div>
+        <div class="center">
+            新增安排
+        </div>
+    </ons-toolbar>
+    <form>
+        <input type="text" ng-model="newPlan.text"
+               style="border-radius: 0;margin-top: 6px" class="form-control" placeholder="输入安排名称 ">
+        <ons-list class="my-list" style="margin-top: 10px">
+
+            <ons-list-item class="my-list-item"
+                           ng-click="editTime('app/plan/dialog/timePickerDlg/timePickerDlg.html')">
+
+                <ons-row>
+                    <ons-col width="40px">
+                        <span class="ion-ios-alarm-outline"
+                              style="display:block;color: orange;font-size: 25px;line-height: inherit"></span>
+                    </ons-col>
+                    <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">时间</label></ons-col>
+                    <ons-col width="200px" style="padding-right: 4px">
+                        <label style="float: right;line-height: inherit;font-size: 16px;font-weight: 100">{{time|date :
+                            "HH:mm"}}</label>
+
+                    </ons-col>
+                    <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+                </ons-row>
+            </ons-list-item>
+            <ons-list-item class="my-list-item"
+                           ng-click="editRank()">
+                <ons-row>
+                    <ons-col width="40px">
+                        <span class="ion-ios-star-outline"
+                              style="display:block;color: greenyellow;font-size: 25px;line-height: inherit"></span>
+                    </ons-col>
+                    <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">重要性</label></ons-col>
+                    <ons-col width="200px" style="padding-right: 4px">
+                        <label style="float: right;line-height: inherit;font-size: 14px;font-weight: 100">{{newPlan.rank|rankFilter}}</label>
+                    </ons-col>
+                    <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+                </ons-row>
+            </ons-list-item>
+
+        </ons-list>
+
+        <ons-list class="my-list" style="margin-top: 20px">
+            <ons-list-item ng-click="editDetail()" class="my-list-item">
+                <ons-row>
+                    <ons-col width="40px">
+                        <span class="ion-ios-list-outline"
+                              style="display:block;color: deepskyblue;font-size: 25px;line-height: inherit"></span>
+                    </ons-col>
+                    <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">细节</label></ons-col>
+                    <ons-col width="64%" style="padding-right: 4px "><p
+                            style="float: right;font-size:14px;line-height: inherit">{{newPlan.detail}}</p></ons-col>
+                    <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+                </ons-row>
+
+            </ons-list-item>
+
+            <ons-list-item ng-click="editAddition()" class="my-list-item">
+                <ons-row>
+                    <ons-col width="40px">
+                        <span class="ion-ios-information-outline"
+                              style="display:block;color: orangered;font-size: 25px;line-height: inherit"></span>
+                    </ons-col>
+                    <ons-col><label style="line-height: 29px;margin: 0;font-weight: 100">注意事项</label></ons-col>
+                    <ons-col width="64%" style="padding-right: 4px"><p
+                            style="float: right;font-size:14px;line-height: inherit">{{newPlan.addition}}</p></ons-col>
+                    <ons-col width="20px"><span class="ion-chevron-right"></span></ons-col>
+                </ons-row>
+            </ons-list-item>
+        </ons-list>
+
+
+        <button class="btn btn-primary " ng-click="addPlan()"
+                style="background-color: rgb(0, 153, 255);height: 36px;width: 100%;position: absolute;bottom: 20px">确定
+        </button>
+
+    </form>
+</ons-page>

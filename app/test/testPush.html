@@ -1,0 +1,35 @@
+<ons-page ng-controller="DemoController">
+
+
+    <ons-toolbar>
+        <div class="center">Pull to refresh</div>
+        <div class="right">
+            <ons-toolbar-button ng-click="reset()">Reset</ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <ons-list>
+        <ons-list-item ng-show="items.length === 0">
+            <div class="info">
+                Pull down to fetch items
+            </div>
+        </ons-list-item>
+        <ons-list-item class="item" ng-repeat="item in items">
+            <ons-row>
+                <ons-col width="80px">
+                    <img ng-src="http://lorempixel.com/60/60/?{{item.rand}}" class="item-thum"></img>
+                </ons-col>
+                <ons-col>
+                    <p class="item-desc">{{ item.desc }}</p>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+    <ons-push-hook ng-action="load($done)" var="loader">
+    <span ng-switch="loader.getCurrentState()">
+          <span ng-switch-when="initial"><ons-icon size="35px" icon="ion-arrow-down-a"></ons-icon> Pull down to refresh</span>
+    <span ng-switch-when="preaction"><ons-icon size="35px" icon="ion-arrow-up-a"></ons-icon> Release to refresh</span>
+    <span ng-switch-when="action"><ons-icon size="35px" spin="true" icon="ion-load-d"></ons-icon> Loading data...</span>
+    </span>
+    </ons-push-hook>
+</ons-page>

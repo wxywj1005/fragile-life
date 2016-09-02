@@ -1,0 +1,57 @@
+<ons-page ng-controller="searchUserDetailCtrl">
+    <ons-toolbar class="my-toolbar" style="height: 24%;">
+        <div class="left">
+            <ons-back-button style="font-weight: 100;color: white">返回</ons-back-button>
+        </div>
+
+
+    </ons-toolbar>
+
+    <div class="my-head-photo">
+        <img width="80px" height="80px" src="img/head.jpg">
+    </div>
+
+
+    <div style="height: 19%;color: white"></div>
+ <div class="content-center" >
+     <div style="margin-top: 50px">
+         <label>{{user.name}}</label>
+         <p style="font-size: 13px">{{user.describtion}}</p>
+     </div>
+ </div>
+    <ons-list >
+        <ons-list-item ng-click="searchUser()">
+            <ons-row  >
+                <ons-col>
+                    <span style="font-size: 20px" class="ion-person" ></span>
+                </ons-col>
+                <ons-col width="88%" style="margin-top: 3px; font-size: 15px">管家号：{{user.userNumber}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+
+    </ons-list>
+
+    <ons-list>
+        <ons-list-item modifier="chevron" >
+            <ons-row>
+                <ons-col>
+                    <span style="font-size: 20px" class="ion-ios-browsers" ></span>
+                </ons-col>
+                <ons-col width="88%" style="margin-top: 3px; font-size: 15px">他的计划</ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+    <ons-list>
+        <ons-list-item modifier="chevron" >
+            <ons-row>
+                <ons-col>
+                    <span style="font-size: 20px" class="ion-ios-clock" ></span>
+                </ons-col>
+                <ons-col width="88%" style="margin-top: 3px; font-size: 15px">生日：</ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+    <div class="content-center my-button-container"  >
+        <button class="my-button" ng-click="addRequest()">加好友</button>
+    </div>
+</ons-page>

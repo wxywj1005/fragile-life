@@ -1,0 +1,27 @@
+<ons-page ng-controller="editRankCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left " >
+        </div>
+        <div class="center" ><label>重要性</label></div>
+        <div class="right " >
+            <label ng-click="finish()" style="margin-right: 10px">完成</label>
+        </div>
+
+
+    </ons-toolbar>
+    <ons-list class="my-list">
+        <ons-list-item  class="my-list-item"
+                ng-repeat="rank in ranks" ng-click ="select(rank)" style="font-size: 14px;margin-top: 5px">
+            <ons-row  >
+                <ons-col>
+                    <label  style="display: inline">{{rank|rankFilter}}</label>
+                </ons-col>
+                <ons-col width="40px">
+                    <span ng-show="newPlan.rank == rank ? true : false" style="color: rosybrown;font-size: 14px" class="ion-android-done"></span>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+
+</ons-page>

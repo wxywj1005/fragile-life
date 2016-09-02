@@ -1,0 +1,42 @@
+<ons-page style="position: relative;" ng-controller="newFriendListCtrl">
+    <ons-pull-hook ng-action="load($do m mx`ne)" var="loader">
+    <span ng-switch="loader.getCurrentState()">
+          <span ng-switch-when="initial"> Pull down to refresh</span>
+    <span ng-switch-when="preaction"> Release to refresh</span>
+    <span ng-switch-when="action"> Loading data...</span>
+    </span>
+    </ons-pull-hook>
+    <div style="width: 100%;height: 16px" >
+        <ons-row>
+            <ons-col></ons-col>
+            <ons-col width="40px">
+                <span style="font-size: 14px">14</span>
+            </ons-col>
+        </ons-row>
+        <ons-list ng-repeat="friend in friendList">
+            <ons-list-item >
+                <ons-row class="my-friend-list-item">
+                    <ons-col>
+                        <div class="head-photo" style="width: 50px;height: 50px;margin-bottom: 5px">
+                            <img src="img/manhead.jpg" style="width:50px;height: 50px">
+                        </div>
+
+                    </ons-col>
+                    <ons-col width="63%">
+                        <div>
+                            <label >{{friend.name}}</label>
+                            <p>我是{{friend.name}}</p>
+                        </div>
+
+                    </ons-col>
+                    <ons-col style="position: relative">
+                        <button ng-click="accept(friend.id)" style="position: absolute;top: 50%;
+                        margin-top: -15px;left: 6px; background-color: rgb(0, 153, 255)" class="btn btn-primary btn-sm">接受</button>
+                    </ons-col>
+                </ons-row>
+            </ons-list-item>
+        </ons-list>
+
+
+    </div>
+</ons-page>

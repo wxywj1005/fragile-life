@@ -1,0 +1,37 @@
+<ons-page ng-controller="searchUserCtrl">
+    <ons-toolbar class="my-toolbar">
+        <div class="left">
+            <ons-back-button style="color: white">取消</ons-back-button>
+        </div>
+        <div class="center">添加好友</div>
+        <div class="right" ng-click="createGroup()">
+            群
+        </div>
+    </ons-toolbar>
+
+<my-search-input  width="'93%'" height="'50px'"
+        ng-click="searchUser" model="searchText" ng-change="searchUser()" ></my-search-input>
+
+
+    <ons-list ng-show="searchText == '' ? false : true">
+        <ons-list-item ng-click="searchUser()">
+            <ons-row  >
+                <ons-col>
+                    <span style="font-size: 20px" class="ion-person" ></span>
+                </ons-col>
+                <ons-col width="88%" style="margin-top: 3px; font-size: 15px">找人：{{searchText}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+        <ons-list-item >
+            <ons-row>
+                <ons-col>
+                    <span style="font-size: 20px" class="ion-person-stalker" ></span>
+                </ons-col>
+                <ons-col width="88%" style="margin-top: 3px; font-size: 15px">找群：{{searchText}}</ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+
+
+</ons-page>
