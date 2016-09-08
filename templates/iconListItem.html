@@ -1,0 +1,19 @@
+<ons-list-item  class="my-list-item" >
+    <ons-row>
+        <ons-col width="40px">
+                        <span ng-class="icon" class="item-icon"
+                              style="color: deepskyblue;font-size: 25px;" ng-style="{'line-height' : height}">
+                        </span>
+        </ons-col>
+        <ons-col><label ng-style="{'line-height' : height}"  style="margin: 0;font-weight: 100">{{itemName}}</label>
+        </ons-col>
+        <!--为什么color设置没用-->
+        <ons-col width="64%" style="padding-right: 4px "><span class="item-desc"
+
+                style="float: right;font-size:16px" ng-style="{'line-height' : height,'color':descFontColor}">{{itemDesc}}</span>
+        </ons-col>
+        <ons-col width="20px"><span class="ion-chevron-right" ng-style="{'line-height' : height}"></span>
+        </ons-col>
+    </ons-row>
+
+</ons-list-item>

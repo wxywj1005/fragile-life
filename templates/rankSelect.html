@@ -1,0 +1,4 @@
+<div class="col-md-12" ng-repeat="rank in ranks" ng-click ="select(rank)">
+    <label class="col-md-9" style="display: inline">{{rank|rankFilter}}</label>
+    <span ng-show="selectedRank == rank ? true : false" class="ion-edit"></span>
+</div>
