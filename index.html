@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="components/loader.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/onsenui/js/onsenui.js"></script>
+    <script src="lib/onsenui/js/angular-onsenui.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="lib/other/bootstrap.min.css">
+    <script src="lib/other/jquery-1.12.2.min.js"></script>
+    <script src="lib/other/bootstrap.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/directive.js"></script>
+
+    <script src="app/plan/plan.js"></script>
+    <script src="js/global.js"></script>
+    <script src="app/login/login.js"></script>
+    <script src="app/me/me.js"></script>
+    <script src="app/plan/dialog/deletePlanDlg/deletePlanDlg.js"></script>
+    <script src="app/me/hobby/hobby.js"></script>
+    <script src="app/me/dialog/editsex.js"></script>
+    <script src="app/me/editMyDesc/editMyDesc.js"></script>
+    <script src="app/canvas/canvas.js"></script>
+    <script src="app/plan/dialog/timePickerDlg/timePickerDlg.js"></script>
+
+
+
+    <script src="app/plan/addPlan/editDetail/editDetail.js"></script>
+    <script src="app/plan/addPlan/editAddition/editAddition.js"></script>
+    <script src="app/plan/addPlan/editRank/editRank.js"></script>
+    <script src="app/me/editUserNumber/editUserNumber.js"></script>
+    <script src="app/me/editName/editName.js"></script>
+
+    <script src="app/contact/friend/friend.js"></script>
+    <script src="app/contact/friend/friendList/friendList.js"></script>
+    <script src="app/contact/friend/searchUser/searchUser.js"></script>
+    <script src="app/contact/friend/searchUser/searchUserDetail/searchUserDetail.js"></script>
+    <script src="app/contact/friend/newFriendList/newFriendList.js"></script>
+
+    <script src="app/plan/sharePlan/friendList/friendList.js"></script>
+    <script src="app/plan/sharePlan/friendList/dialogs/shareDlg.js"></script>
+    <script src="app/plan/passPlan/passPlan.js"></script>
+    <script src="app/plan/passPlan/passPlanDlg/passPlanDlg.js"></script>
+
+
+    <script src="app/contact/group/createGroup/createGroup.js"></script>
+    <script src="app/contact/group/editType/editType.js"></script>
+    <script src="app/contact/group/friendList/friendList.js"></script>
+    <script src="app/contact/group/groupList/groupList.js"></script>
+    <script src="app/contact/group/groupDetail/groupDetail.js"></script>
+    <script src="app/contact/group/groupDetail/editGroupNum/editGroupNum.js"></script>
+    <script src="app/contact/group/memberList/memberList.js"></script>
+    <script src="app/contact/group/groupAddPlan/groupAddPlan.js"></script>
+
+    <script src="app/test/testPush.js"></script>
+
+</head>
+<body>
+    <ons-navigator var="myNavigator">
+        <ons-page >
+            <ons-tabbar>
+                <ons-tab class="my-toolbar" page="app/plan/list.html" label="我的安排" icon="ion-ios-browsers" active="true"></ons-tab>
+                <ons-tab class="my-toolbar" page="app/contact/friend/friend.html" label="画板" icon="ion-person"></ons-tab>
+                <ons-tab class="my-toolbar" page="app/me/me.html" label="我的信息" icon="ion-person"></ons-tab>
+            </ons-tabbar>
+
+
+        </ons-page>
+    </ons-navigator>
+
+
+</body>
+
+
+</html>
